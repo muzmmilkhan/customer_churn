@@ -4,8 +4,8 @@ from tensorflow.keras.models import load_model
 from pydantic import BaseModel
 from fastapi import FastAPI
 
-model = load_model('./churn_model/customer_churn_model.h5')
-scaler = joblib.load('./churn_model/scaler.pkl')
+model = load_model('customer_churn_model.h5')
+scaler = joblib.load('scaler.pkl')
 
 
 class CustomerFeatures(BaseModel):
